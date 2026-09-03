@@ -11,8 +11,30 @@ config_version=5
 [application]
 
 config/name="Fire Football"
+run/main_scene="uid://bsuucw3gay7ww"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=280
+window/size/viewport_height=180
+window/size/window_width_override=1400
+window/size/window_height_override=900
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "gray",
+"res://assets/": "green",
+"res://scenes/": "red"
+}
 
 [physics]
 
@@ -20,6 +42,7 @@ config/icon="res://icon.svg"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
