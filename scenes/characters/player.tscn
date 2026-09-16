@@ -105,11 +105,12 @@ _data = {
 radius = 4.0
 height = 18.0
 
-[node name="Player" type="CharacterBody2D" unique_id=182197635]
+[node name="Player" type="CharacterBody2D" unique_id=793031092]
+collision_layer = 2
 script = ExtResource("1_yewv4")
-speed = 200.0
+speed = 80.0
 
-[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1675453631]
+[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1293375549]
 unique_name_in_owner = true
 texture = ExtResource("1_rp718")
 centered = false
@@ -117,12 +118,12 @@ offset = Vector2(-16, -32)
 hframes = 6
 vframes = 13
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1663747117]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=70907129]
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_dyp2m")
 autoplay = &"idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1647997949]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1083190211]
 position = Vector2(0, -3)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_rp718")
