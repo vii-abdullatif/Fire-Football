@@ -11,9 +11,10 @@ func _enter_tree() -> void:
 	animation_player.play("pre_kick")
 	player.velocity = Vector2.ZERO
 	time_start_shot = Time.get_ticks_msec()
+	shot_direction = player.heading
 
 func _process(delta: float) -> void:
-	shot_direction = KeyUtils.get_input_vector(player.control_scheme) * delta
+	shot_direction += KeyUtils.get_input_vector(player.control_scheme) * delta
 	if KeyUtils.is_action_just_released(player.control_scheme, KeyUtils.Action.SHOOT):
 		var duration_press := clampf(Time.get_ticks_msec() - time_start_shot, 0.0, DURATION_MAX_BONUS)
 		var ease_time := duration_press / DURATION_MAX_BONUS
